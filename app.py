@@ -4,7 +4,6 @@ from flask import Flask, redirect, url_for, render_template, request, session
 app = Flask(__name__)
 
 
-
 # 首页
 @app.route('/')
 @app.route('/index')
@@ -41,3 +40,7 @@ def infolibrary():
 @app.route('/download')
 def download():
     return 'download'
+
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port="5001", debug=True)
