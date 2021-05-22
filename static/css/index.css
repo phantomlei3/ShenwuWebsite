@@ -1,0 +1,136 @@
+.news_block {
+    width: 100%;
+    background: #f7f3f1;
+}
+
+.news {
+    width: 1200px;
+    height: 376px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.news .news_list {
+    padding: 0 40px;
+    float: left;
+    width: 620px;
+    height: 376px;
+    background: #fff;
+    position: relative;
+}
+
+.news .news_list .news_more {
+    background: #6e6965;
+    display: block;
+    width: 34px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    top: 0px;
+}
+
+.news .news_list .news_list_title {
+    padding-top: 30px;
+    font-size: 24px;
+    color: #925725;
+    margin-bottom: 25px;
+}
+
+.news .news_list .news_list_big_title {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    color: #655a50;
+    cursor: pointer;
+    border-bottom: 3px solid #eceae8;
+    padding-bottom: 25px;
+    text-decoration: None;
+}
+
+.news .news_list .news_list_big_title:hover {
+    text-decoration: underline;
+}
+
+.news .news_list .news_list_item_list {
+    padding-top: 25px;
+}
+
+.news .news_list .news_list_item_list a {
+    display: block;
+    font-size: 14px;
+    line-height: 30px;
+    color: #655a50;
+    text-decoration: none;
+}
+
+.news .news_list .news_list_item_list a:hover {
+    text-decoration: underline;
+}
+
+.news .newcomer {
+    width: 477px;
+    float: left;
+    height: 376px;
+    background: url("/static/img/rewards.png") no-repeat;
+}
+
+.news .newcomer .newcomer_button {
+    width: 246px;
+    height: 56px;
+    display: block;
+    margin-top: 244px;
+    margin-left: 83px;
+}
+
+.setup_block {
+    width: 100%;
+    height: 892px;
+    background: url("/static/img/setup_background.png") no-repeat;
+}
+
+.setup_content {
+    padding: 80px 100px 0 1200px;
+    color: white;
+}
+
+.setup_content .setup_title {
+    text-align: center;
+    font-size: 48px;
+    line-height: 80px;
+    font-weight: bold;
+}
+
+.setup_item_table {
+    width: 100%;
+    table-layout: fixed;
+    padding-top: 40px;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.setup_item_table thead th {
+    height: 14px;
+    font-weight: bold;
+    color: #000000;
+    padding: 20px;
+    background: #dedede;
+}
+
+.setup_item_table tbody th {
+    height: 14px;
+    font-weight: normal;
+    padding: 20px;
+    border-bottom: 1px solid #e8e8e8;
+    border-right: 1px solid #e8e8e8;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.setup_item_table tbody td {
+    height: 14px;
+    font-weight: normal;
+    padding: 20px;
+    border-bottom: 1px solid #e8e8e8;
+    text-align: left;
+    vertical-align: top;
+}
