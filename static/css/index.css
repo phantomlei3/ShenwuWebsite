@@ -58,12 +58,14 @@
 
 
 .news_block {
+    display: block;
     width: 100%;
     background: #f7f3f1;
+    position:relative;
 }
 
 .news {
-    width: 100%;
+    min-width: 1733px;
     height: 500px;
     margin: 0 180px;
     position: relative;
