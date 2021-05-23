@@ -1,7 +1,7 @@
 /*banner*/
 .banner {
-    height: 540px;
-    width: 100%;
+    min-height: 580px;
+    min-width: 1920px;
     margin-top: 60px;
 }
 
@@ -11,6 +11,12 @@
     position: relative;
 }
 
+.banner-img {
+    min-height: 580px;
+    width: 100%;
+    background-size:cover;
+    background-position:center;
+}
 .article_block {
     width: 100%;
     display: flex;
