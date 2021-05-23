@@ -41,7 +41,7 @@ body {
 }
 
 .navigation .navigation_link a {
-    font-size: 18px;
+    font-size: 16px;
     color: #fff;
     float: left;
     display: block;
@@ -63,7 +63,7 @@ body {
 
 /*Bottom*/
 .bottom_info {
-    margin-top: 500px;
+    margin-top: 30px;
     width: 100%;
     overflow: hidden;
 }
@@ -87,63 +87,9 @@ body {
     font-size: 14px;
 }
 
-
-/*banner*/
-.banner {
-    height: 640px;
-    width: 100%;
-    margin-top: 60px;
+.hidden{
+    display: none;
 }
 
-.banner_content {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
 
-.download {
-    z-index: 9999;
-    position: absolute;
-    right: 120px;
-    top: 126px;
-    width: 261px;
-    height: 461px;
-    background: url("/static/img/download.png") no-repeat;
-}
 
-.download .download_link {
-    width: 261px;
-    display: block;
-    height: 260px;
-}
-
-.download .qq_info {
-    display: block;
-    width: 100%;
-    height: 60px;
-    line-height: 60px;
-    text-decoration: none;
-    color: #fff;
-    font-size: 14px;
-    padding-left: 25px;
-    text-align: center;
-    background: url("/static/img/qq_logo.png") 95px center no-repeat;
-}
-
-.download .shimo_info {
-    width: 261px;
-    color: #fff;
-    font-size: 14px;
-    line-height: 62px;
-    text-align: center;
-    padding-left: 23px;
-    text-decoration: none;
-    display: block;
-    height: 62px;
-    position: relative;
-    background: url("/static/img/shimo_logo.png") 70px center no-repeat;
-}
-
-.download a:hover {
-    color: #fecf42;
-}

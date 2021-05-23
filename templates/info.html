@@ -1,0 +1,87 @@
+{% extends 'base.html'%}
+
+{% block extra_head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/info.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layui.css') }}"  media="all">
+{% endblock %}
+
+{% block banner %}
+    <div class="banner">
+        <div class="banner_content">
+            <div class="banner-img">
+                <img src="/static/img/{{banner}}_bg.png" alt="">
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block content %}
+<div class="info_block">
+    <div class="info">
+        <!-- 新闻列表 -->
+        <div class="info_list">
+            <ul class="info_list_content" id="info_list_content">
+            </ul>
+            <ul id="biuuu_city_list"></ul>
+            <div id="page_control"></div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+{% block extra_script %}
+<script src="{{ url_for('static', filename='js/layui.js') }}" charset="utf-8"></script>
+<!-- 注意：如果你直接复制所有代码到本地，上述 JS 路径需要改成你本地的 -->
+<script>
+// First, checks if it isn't implemented yet.
+if (!String.prototype.format) {
+  String.prototype.format = function() {
+    var args = arguments;
+    return this.replace(/{(\d+)}/g, function(match, number) {
+      return typeof args[number] != 'undefined'
+        ? args[number]
+        : match
+      ;
+    });
+  };
+}
+
+layui.use(['laypage', 'layer'], function(){
+  var laypage = layui.laypage, layer = layui.layer;
+
+  //将一段数组分页展示
+
+  //测试数据
+  var data = {{ all_info|tojson }};
+
+  console.log(data)
+
+  //调用分页
+  laypage.render({
+    elem: 'page_control'
+    ,count: data.length
+    ,limit: 10
+    ,theme: '#15414b'
+    ,jump: function(obj){
+      //模拟渲染
+      document.getElementById('info_list_content').innerHTML = function(){
+        var arr = []
+        ,thisData = data.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
+        layui.each(thisData, function(index, info){
+          arr.push('<li><p>'
+              +'<strong>【{0}】</strong>'.format(info.type)
+              +'<span>[{0}]</span>'.format(info.time)
+              +'<a href="/article?id={0}">{1}</a>'.format(info.id, info.title)
+                +'</p></li>');
+        });
+        return arr.join('');
+      }();
+    }
+  });
+
+});
+</script>
+{% endblock %}

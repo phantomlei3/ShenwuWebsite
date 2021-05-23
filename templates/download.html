@@ -1,0 +1,34 @@
+{% extends 'base.html'%}
+
+{% block extra_head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/download.css') }}">
+{% endblock %}
+
+{% block banner %}
+    <div class="banner">
+        <div class="banner_content">
+            <div class="banner-img">
+                <img src="/static/img/banner.png" alt="">
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="download_block">
+    <div class="download_box">
+                <div class="download_title">游戏客户端</div>
+                <div class="download_description">建议加入游戏QQ玩家群（12923332)，如果下载安装过程中出现任何问题，可以在群里问管理员进行沟通。</div>
+                <div class="download_option">
+                    <a href="http://61.177.172.122:8800/G22shenwu.7z" class="btn01">
+                        <span>[电信路线]</span><br>下载游戏
+                    </a>
+
+                    <a href="http://112.85.42.127:8800/G22shenwu.7z" class="btn02">
+                        <span>[联通路线]</span><br>下载游戏
+                    </a>
+                </div>
+
+    </div>
+</div>
+{% endblock %}

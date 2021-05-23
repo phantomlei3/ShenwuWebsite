@@ -1,0 +1,148 @@
+{% extends 'base.html'%}
+
+{% block extra_head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock %}
+
+{% block banner %}
+    <div class="banner">
+        <div class="banner_content">
+            <div class="banner-img">
+                <img src="/static/img/banner.png" alt="">
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="download">
+            <a href="/download" class="download_link"></a>
+            <a href="https://shimo.im/docs/hW3XVcqCRD9TVdxV/read" target="_blank" class="shimo_info">神武洛奇文档</a>
+            <a href="https://jq.qq.com/?_wv=1027&amp;k=rkWwk1i3" target="_blank" class="qq_info">QQ群</a>
+    </div>
+    <div class="news_block">
+        <div class="news">
+            <!-- 奖励 -->
+            <div class="rewards">
+                <a href="/" class="rewards_button"></a>
+            </div>
+            <!-- 新闻列表 -->
+            <div class="news_list">
+                <ul class="news_list_nav">
+                  <li class="news_list_item news_nav_hover">
+                    <a href="javascript:void(0);" style="cursor: default;">最新</a>
+                  </li>
+                  <li class="news_list_item">
+                    <a  href="javascript:;">公告</a>
+                  </li>
+                  <li class="news_list_item">
+                    <a href="javascript:;">活动</a>
+                  </li>
+                  <li class="news_list_item">
+                    <a href="javascript:;">新闻</a>
+                  </li>
+                </ul>
+                <ul class="news_list_content" id="public_info">
+                    {% for info in public_info %}
+                    <li>
+                        <p>
+                            <strong>【{{info.type}}】</strong>
+                            <span>[{{info.time}}]</span>
+                            <a href="/article?id={{info.id}}">{{info.title}}</a>
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <ul class="news_list_content hidden" id="announce_info">
+                    {% for info in announce_info %}
+                    <li>
+                        <p>
+                            <strong>【{{info.type}}】</strong>
+                            <span>[{{info.time}}]</span>
+                            <a href="/article?id={{info.id}}">{{info.title}}</a>
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <ul class="news_list_content hidden" id="event_info">
+                    {% for info in event_info %}
+                    <li>
+                        <p>
+                            <strong>【{{info.type}}】</strong>
+                            <span>[{{info.time}}]</span>
+                            <a href="/article?id={{info.id}}">{{info.title}}</a>
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <ul class="news_list_content hidden" id="news_info">
+                    {% for info in news_info %}
+                    <li>
+                        <p>
+                            <strong>【{{info.type}}】</strong>
+                            <span>[{{info.time}}]</span>
+                            <a href="/article?id={{info.id}}">{{info.title}}</a>
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="setup_block" id="setup">
+        <div class="setup_content">
+            <table class="setup_item_table">
+                    <thead>
+                        <tr><th>项目</th>
+                            <th>本服设置</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><th>版本</th>
+                            <td>G22S2</td></tr>
+                        <tr><th>全局经验</th>
+                            <td>20倍（经验、每级AP点等）</td></tr>
+                        <tr><th>技能修炼</th>
+                            <td>50倍</td></tr>
+                        <tr><th>跑商贸易</th>
+                            <td>5倍（经验、金币、杜卡特）</td></tr>
+                        <tr><th>任务</th>
+                            <td>5倍（经验、金币）</td></tr>
+                        <tr><th>综合</th>
+                            <td>大量的技能增强，DIY装备</td></tr>
+                    </tbody>
+                </table>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block extra_script%}
+<!-- Hover and information change in news sections -->
+<script>
+$(".news_list_item").hover(
+  function(){
+      $(".news_list_item").removeClass("news_nav_hover");
+      $(this).addClass("news_nav_hover");
+
+      $(".news_list_content").addClass("hidden");
+      if ($(this).text().trim()==="最新"){
+          $("#public_info").removeClass("hidden");
+      }
+      else if($(this).text().trim()==="公告"){
+          $("#announce_info").removeClass("hidden");
+      }
+      else if($(this).text().trim()==="活动"){
+          $("#event_info").removeClass("hidden");
+      }
+      else if($(this).text().trim()==="新闻"){
+          $("#news_info").removeClass("hidden");
+      }
+  }
+);
+</script>
+{% endblock %}
+
+

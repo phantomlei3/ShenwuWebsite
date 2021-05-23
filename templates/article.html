@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+
+{% block extra_head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/article.css') }}">
+{% endblock %}
+
+
+{% block banner %}
+    <div class="banner">
+        <div class="banner_content">
+            <div class="banner-img">
+                <img src="/static/img/{{banner}}_bg.png" alt="">
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="article_block">
+    <div class="article">
+        <div class="article_title">
+            【{{article.type}}】{{article.title}}
+        </div>
+        <div class="article_content">
+            {{article.content}}
+        </div>
+    </div>
+</div>
+{% endblock %}

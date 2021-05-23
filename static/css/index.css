@@ -1,80 +1,162 @@
+/*banner*/
+.banner {
+    height: 640px;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.banner_content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.download {
+    z-index: 9999;
+    position: absolute;
+    right: 240px;
+    top: 750px;
+    width: 261px;
+    height: 461px;
+    background: url("/static/img/download.png") no-repeat;
+}
+
+.download .download_link {
+    width: 261px;
+    display: block;
+    height: 260px;
+}
+
+.download .qq_info {
+    display: block;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    padding-left: 25px;
+    text-align: center;
+    background: url("/static/img/qq_logo.png") 95px center no-repeat;
+}
+
+.download .shimo_info {
+    width: 261px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 62px;
+    text-align: center;
+    padding-left: 23px;
+    text-decoration: none;
+    display: block;
+    height: 62px;
+    position: relative;
+    background: url("/static/img/shimo_logo.png") 70px center no-repeat;
+}
+
+.download a:hover {
+    color: #fecf42;
+}
+
+
 .news_block {
     width: 100%;
     background: #f7f3f1;
 }
 
 .news {
-    width: 1200px;
-    height: 376px;
-    margin: 0 auto;
+    width: 100%;
+    height: 500px;
+    margin: 0 180px;
     position: relative;
 }
 
 .news .news_list {
     padding: 0 40px;
     float: left;
-    width: 620px;
-    height: 376px;
+    width: 730px;
+    height: 100%;
     background: #fff;
     position: relative;
+    color: #2b2b2b;
 }
 
-.news .news_list .news_more {
-    background: #6e6965;
+ul{
+    list-style-type: none;
+}
+
+.news_list .news_list_nav{
+    padding: 0 0;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid #555555;
+}
+
+.news_list .news_list_nav li{
+    width: 120px;
+    height: 50px;
+    text-align: center;
+}
+
+.news_nav_hover{
+    border-bottom: 2px solid #bc0303;
+}
+
+.news_nav_hover a{
+    color: #bc0303;
+}
+
+li a{
+    color: #2b2b2b;
+    text-decoration-line: none;
+}
+
+.news_list .news_list_nav li a{
     display: block;
-    width: 34px;
-    height: 30px;
-    position: absolute;
-    right: 0;
-    top: 0px;
+    width: 120px;
+    line-height: 50px;
 }
 
-.news .news_list .news_list_title {
-    padding-top: 30px;
-    font-size: 24px;
-    color: #925725;
-    margin-bottom: 25px;
+.news_list_content{
+    width: 650px;
+    padding: 0;
 }
 
-.news .news_list .news_list_big_title {
-    display: block;
-    font-size: 24px;
-    font-weight: bold;
-    color: #655a50;
-    cursor: pointer;
-    border-bottom: 3px solid #eceae8;
-    padding-bottom: 25px;
-    text-decoration: None;
+.news_list_content li{
+    float: left;
+    width: 730px;
+    border-bottom: 1px dashed #c2c2c3;
+    line-height: 20px;
 }
 
-.news .news_list .news_list_big_title:hover {
-    text-decoration: underline;
+
+.news_list_content a:hover{
+    color: #bc0303;
 }
 
-.news .news_list .news_list_item_list {
-    padding-top: 25px;
+.news_list_content li p strong{
+    float: left;
 }
 
-.news .news_list .news_list_item_list a {
-    display: block;
-    font-size: 14px;
-    line-height: 30px;
-    color: #655a50;
-    text-decoration: none;
+.news_list_content li p span{
+    float: right;
 }
 
-.news .news_list .news_list_item_list a:hover {
-    text-decoration: underline;
+.news_list_content li p a{
+    width: 560px;
+    float: left;
 }
 
-.news .newcomer {
-    width: 477px;
+
+.news .rewards {
+    width: 380px;
     float: left;
     height: 376px;
     background: url("/static/img/rewards.png") no-repeat;
+    margin-top: 60px;
 }
 
-.news .newcomer .newcomer_button {
+.news .rewards .rewards_button {
     width: 246px;
     height: 56px;
     display: block;
@@ -82,14 +164,15 @@
     margin-left: 83px;
 }
 
+
 .setup_block {
     width: 100%;
-    height: 892px;
+    height: 680px;
     background: url("/static/img/setup_background.png") no-repeat;
 }
 
 .setup_content {
-    padding: 80px 100px 0 1200px;
+    margin: 0 600px;
     color: white;
 }
 
@@ -103,9 +186,10 @@
 .setup_item_table {
     width: 100%;
     table-layout: fixed;
-    padding-top: 40px;
+    padding-top: 80px;
     font-size: 18px;
-    line-height: 40px;
+    line-height: 30px;
+    text-align: left;
 }
 
 .setup_item_table thead th {
@@ -124,6 +208,7 @@
     border-right: 1px solid #e8e8e8;
     text-align: center;
     vertical-align: middle;
+    text-align: left;
 }
 
 .setup_item_table tbody td {
@@ -134,3 +219,4 @@
     text-align: left;
     vertical-align: top;
 }
+
