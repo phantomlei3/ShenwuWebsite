@@ -12,10 +12,8 @@
 }
 
 .download {
-    z-index: 9999;
-    position: absolute;
-    right: 240px;
-    top: 750px;
+    margin-left: 1220px;
+    position: relative;
     width: 261px;
     height: 461px;
     background: url("/static/img/download.png") no-repeat;
