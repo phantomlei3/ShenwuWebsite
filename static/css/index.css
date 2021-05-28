@@ -69,6 +69,7 @@
     width: 100%;
     background: #f7f3f1;
     position:relative;
+    margin-bottom: 4vh;
 }
 
 .news {
@@ -213,7 +214,6 @@ li a{
     padding: 20px;
     border-bottom: 1px solid #e8e8e8;
     border-right: 1px solid #e8e8e8;
-    text-align: center;
     vertical-align: middle;
     text-align: left;
 }
@@ -227,3 +227,114 @@ li a{
     vertical-align: top;
 }
 
+.special_block {
+    width: 100vw;
+    background-color: white;
+}
+
+.special_section{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 4vh;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.special_image#special_weapon{
+    width: 650px;
+}
+
+.special_image#special_gift{
+    width: 650px;
+
+}
+
+.special_image#special_activity{
+    width: 800px;
+
+}
+
+.special_image img{
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+
+.special_description{
+    width: 550px;
+}
+
+
+.special_description#special_weapon_txt{
+    margin-left: 8vw;
+}
+
+.special_description#special_gift_txt{
+    margin-right: 8vw;
+}
+
+.special_description#special_activity_txt{
+    margin-left: 8vw;
+    width: 500px;
+}
+
+
+.special_title {
+    font-size: 56px;
+    color: #1e5e6a;
+
+}
+
+.special_content{
+    margin-top: 3vw;
+    line-height: 2vw;
+    font-size: 24px;
+    color: #2b2b2b;
+}
+
+.image_block {
+    margin-top: 16vh;
+    width: 100vw;
+    display: flex;
+    padding-bottom: 8vh;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #4f99a7;
+}
+
+
+.image_title{
+    width: 100vw;
+    height: 280px;
+    background: url('/static/img/神武回忆录.png') no-repeat center top;
+    background-size: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.image_title_txt{
+    padding-top: 100px;
+    color: white;
+    font-size: 72px;
+    text-align: center;
+}
+
+.image_section{
+    width: 100vw;
+    height: 100vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+
+    text-align: center;
+}
+
+.image_section img{
+    width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+
+}
